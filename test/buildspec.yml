@@ -4,10 +4,10 @@ phases:
   install:
     runtime-versions:
       python: 3.8
-    commands:
-      - pip install albumentations
+      
   build:
     commands:
+      - pip install albumentations
       # Call the test python code
       - python test/test.py --import-build-config $CODEBUILD_SRC_DIR_BuildArtifact/staging-config-export.json --export-test-results $EXPORT_TEST_RESULTS
       # Show the test results file
